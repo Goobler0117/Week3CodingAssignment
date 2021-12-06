@@ -1,0 +1,194 @@
+//1-
+    //a. + b.
+let ages = [3, 9, 23, 64, 2, 8, 28, 93, 101];
+let lastElement = ages[ages.length - 1];
+let firstElement = ages[0];
+console.log(lastElement - firstElement);
+
+    //c.
+function arrayAvg(ages) {
+    let i = 0
+    let sum = 0
+    let ageLen = ages.length;
+    while (i < ageLen) {
+        sum = sum + ages[i++];
+    }
+    return sum / ageLen;
+}
+let avg = arrayAvg(ages);
+console.log(avg);
+
+
+
+
+//2-
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+
+//a.
+let totalChars = names.map(function(name) {
+return name.length
+});
+
+function namesCharAvg(names) {
+    let i = 0
+    let sumOf = 0
+    let namesCharLen = totalChars.length;
+    while (i < namesCharLen) {
+        sumOf = sumOf + totalChars[i++];
+    }
+    return sumOf / namesCharLen;
+}
+let newAvg = namesCharAvg(names);
+console.log(newAvg);
+
+//b.
+function goThroughNames(names) {
+    for (let i = 0; i < names.length; i++);
+    console.log(names.join(' '));
+}
+goThroughNames(names);
+
+
+
+// 3-
+//     you can access the last element of an array by using 
+//     console.log(array.length - 1);
+//     where array = your array
+
+
+
+
+// 4-
+//     you can access the first array by using
+//     console.log(array[0]);
+//     where array = your array
+
+
+
+
+
+// 5
+let nameLengths = names.map(function(name) {
+        return name.length
+    });
+
+    function newCountNames (names) {
+        let i = 0
+        let num = 0
+        let nameLengths = names.length ;
+        while (i < nameLengths) {
+            num = num + names[i++];
+        }
+}
+console.log(nameLengths);
+
+
+
+// 6-
+let chars = nameLengths.map(function(name) {
+    return nameLengths.length
+    });
+function addLengths (nameLengths) {
+    let i = 0
+    let summation = 0
+    let nameLengthsSummation = chars.length;
+    while (i < nameLengthsSummation) {
+        summation = summation + nameLengths[i++];
+    }
+    return summation;
+}
+let addedLengths = addLengths(nameLengths);
+console.log(addedLengths);
+
+
+
+
+// 7-
+function multiply (word, n) {
+    return word.repeat(n);
+  };
+  let newWords = multiply('Hello', 3);
+console.log(newWords);
+
+
+
+
+//   8 -
+function createFullName(firstName, lastName) {
+    console.log(firstName + ' ' + lastName);
+}
+createFullName('Spenser', 'Williams');
+
+
+
+
+// 9-
+let numbers = [0,17,33,48,6];
+function addNumbers (previousNumber, currentNumber) {
+   let total = 0;
+   for(let i in previousNumber) {
+       total += previousNumber[i];
+   }
+   return total;
+}
+let newTotal = addNumbers(numbers);
+if (newTotal > 100) {
+    newTotal = 'true';
+}
+console.log(newTotal);
+
+
+
+// 10-
+let array =[6, 7, 8, 9];
+
+function avgOfArray(array) {
+    let total = array.reduce((acc, c) => acc + c, 0);
+    return total / array.length;
+}
+
+let newArrayAvg = avgOfArray(array);
+console.log(newArrayAvg);
+
+
+
+
+// 11-
+let numArr = [1, 2, 3, 4];
+let secondNumArr = [5, 6, 7, 8];
+function findArrAvg (numArr) {
+    let total = numArr.reduce((acc, c) => acc + c, 0);
+    return total / numArr.length;
+}
+let avgOfNumArr = findArrAvg(numArr);
+let avgOfSecondNumArr = findArrAvg(secondNumArr);
+if (avgOfNumArr > avgOfSecondNumArr) {
+    console.log('true')
+}
+
+
+
+
+// 12- 
+function willBuyDrink (isHotOutside, moneyInPocket){
+    if (isHotOutside == true && moneyInPocket >= 10.50) {
+        console.log('true');
+    }
+}
+willBuyDrink(true, 15.00);
+
+
+
+
+// 13-
+function willFindRestroom (bladderIsFull, cannotMakeIt) {
+    if (bladderIsFull == true && cannotMakeIt == true) {
+        console.log("WHERE IS THE NEAREST RESTROOM?!");
+    } else {
+        console.log("Nah. I can hold it!");
+    }
+}
+willFindRestroom (true, true);
+willFindRestroom (false, false);
+// this function takes boolean values for the parameters of your bladder being full as well as whether or not you can make it.
+// I created this function because sometimes you just have to go.
